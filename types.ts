@@ -1,13 +1,6 @@
-
-import React from 'react';
+import type React from 'react';
 
 export type Language = 'eng' | 'rus' | 'thai';
-
-export interface Feature {
-    icon: React.ComponentType<{ className?: string }>;
-    title: string;
-    description: string;
-}
 
 export interface Founder {
     name: string;
