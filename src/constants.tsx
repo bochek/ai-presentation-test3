@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Slide, { SlideTitle, SlideSubtitle } from './components/Slide';
 import SimpleBarChart from './components/Chart';
@@ -146,7 +147,7 @@ const UseCasesSlide = () => {
 
 const FounderCard: React.FC<{ founder: Founder; delay: string }> = ({ founder, delay }) => (
     <div className="bg-card-bg p-6 rounded-lg border border-white/10 flex flex-col items-center text-center animate-fade-in-up" style={{ animationDelay: delay }}>
-        <img src={`https://via.placeholder.com/150/2575FC/FFFFFF?text=${founder.name.charAt(0)}`} alt={founder.name} className="w-32 h-32 rounded-full mb-4 border-4 border-brand-secondary object-cover" />
+        <img src={`https://via.placeholder.com/150/2575FC/FFFFFF?text=${founder.name.split(' ').map(n=>n[0]).join('')}`} alt={founder.name} className="w-32 h-32 rounded-full mb-4 border-4 border-brand-secondary object-cover" />
         <h3 className="text-xl font-bold text-light-text">{founder.name}</h3>
         <p className="text-brand-secondary font-medium">{founder.title}</p>
     </div>
@@ -189,7 +190,7 @@ const TestimonialSlide = () => {
     const t = useTranslations();
     return (
         <Slide>
-            <img src={`https://via.placeholder.com/150/2575FC/FFFFFF?text=${t.testimonialSlide.author.charAt(0)}`} className="w-24 h-24 rounded-full border-4 border-brand-secondary mb-6 animate-fade-in object-cover" style={{ animationDelay: '0.2s' }} alt="CEO portrait" />
+            <img src={`https://via.placeholder.com/150/2575FC/FFFFFF?text=${t.testimonialSlide.author.split(' ').map(n=>n[0]).join('')}`} className="w-24 h-24 rounded-full border-4 border-brand-secondary mb-6 animate-fade-in object-cover" style={{ animationDelay: '0.2s' }} alt="CEO portrait" />
             <blockquote className="max-w-3xl text-xl md:text-2xl italic text-light-text leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
                 “{t.testimonialSlide.quote}”
             </blockquote>

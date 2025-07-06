@@ -1,3 +1,4 @@
+
 import React, { useState, useCallback, useEffect } from 'react';
 import { SLIDES } from './constants';
 import { ChevronLeft, ChevronRight, Zap } from 'lucide-react';
