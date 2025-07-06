@@ -146,7 +146,7 @@ const UseCasesSlide = () => {
 
 const FounderCard: React.FC<{ founder: Founder; delay: string }> = ({ founder, delay }) => (
     <div className="bg-card-bg p-6 rounded-lg border border-white/10 flex flex-col items-center text-center animate-fade-in-up" style={{ animationDelay: delay }}>
-        <img src={founder.imageUrl} alt={founder.name} className="w-32 h-32 rounded-full mb-4 border-4 border-brand-secondary object-cover" />
+        <img src={`https://via.placeholder.com/150/2575FC/FFFFFF?text=${founder.name.charAt(0)}`} alt={founder.name} className="w-32 h-32 rounded-full mb-4 border-4 border-brand-secondary object-cover" />
         <h3 className="text-xl font-bold text-light-text">{founder.name}</h3>
         <p className="text-brand-secondary font-medium">{founder.title}</p>
     </div>
